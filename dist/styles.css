@@ -43,6 +43,12 @@ header .trybtn {
   color: #ff8fd8;
 }
 
+p {
+  font-size: 0.8125rem;
+  color: #00252e;
+  font-weight: 400;
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,23 +63,20 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 5.9375rem 2.625rem;
+  padding: 5.9375rem 2.625rem;
 }
 
-.hero h1 {
+section.hero h1 {
   font-family: 'Poppins', sans-serif;
   color: #00252e;
   margin-bottom: 2.25rem;
 }
 
-.hero p {
-  color: #00252e;
-  font-weight: 400;
+section.hero p {
   margin-bottom: 3.125rem;
-  font-size: 0.8125rem;
 }
 
-.hero .start {
+section.hero .start {
   border-radius: 1.5625rem;
   padding: 1rem 2.5rem;
   border: 2px solid #ff52bf;
@@ -84,14 +87,18 @@ section {
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-.stats .main-img {
+section.stats {
+  padding-bottom: 1.875rem;
+}
+
+section.stats .main-img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
   margin-bottom: 1.5rem;
 }
 
-.stats .stat {
+section.stats .stat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,27 +109,68 @@ section {
   margin-top: 6.25rem;
 }
 
-.stats .stat img {
+section.stats .stat img {
   margin-bottom: 0.5rem;
 }
 
-.stats .stat .community {
+section.stats .stat .community {
   height: 1.6875rem;
   width: 1.8125rem;
 }
 
-.stats .stat .message {
+section.stats .stat .message {
   height: 1.1875rem;
   width: 1.4375rem;
 }
 
-.stats .stat h2 {
+section.stats .stat h2 {
   font-size: 3.25rem;
   color: #00252e;
 }
 
-.stats .stat p {
-  font-size: 0.8125rem;
+section.stats .stat p {
   color: #81959c;
+}
+
+.curve {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.curve__topone {
+  background-image: url(../images/bg-section-top-mobile-1.svg);
+  height: 7rem;
+}
+
+.curve__botone {
+  background-image: url(../images/bg-section-bottom-mobile-1.svg);
+  height: 3.25rem;
+}
+
+section.grow-together {
+  background-color: #f5faff;
+}
+
+section.grow-together .img-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+section.grow-together .img-container img {
+  width: 100%;
+}
+
+section.grow-together .gt-content {
+  margin-top: 5rem;
+}
+
+section.grow-together .gt-content h2 {
+  color: #00252e;
+}
+
+section.grow-together .gt-content p {
+  margin-top: 1.25rem;
 }
 /*# sourceMappingURL=styles.css.map */
