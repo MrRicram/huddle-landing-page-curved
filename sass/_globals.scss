@@ -12,7 +12,7 @@ html {
 body {
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    text-align: center;
+    //text-align: center;
 }
 
 header {
@@ -41,6 +41,10 @@ p {
     font-weight: 400;
 }
 
+button {
+    cursor: pointer;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -50,6 +54,7 @@ section {
 }
 
 section.hero {
+    text-align: center;
 
     h1 {
         font-family: 'Poppins', sans-serif;
@@ -59,28 +64,29 @@ section.hero {
 
     p {
         margin-bottom: 3.125rem;
-    }
+    } 
+}
 
-    .start {
-        border-radius: 1.5625rem;
-        padding: 1rem 2.5rem;
-        border: 2px solid $pink;
-        background-color: $pink;
-        font-weight: 600;
-        color: $white;
-        box-shadow:
-            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-            0 12.5px 10px rgba(0, 0, 0, 0.06),
-            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-            0 100px 80px rgba(0, 0, 0, 0.12);
-    }
+.start {
+    border-radius: 1.5625rem;
+    padding: 1rem 2.5rem;
+    border: 2px solid $pink;
+    background-color: $pink;
+    font-weight: 600;
+    color: $white;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
 section.stats {
 
     padding-bottom: 1.875rem;
+    text-align: center;
 
     .main-img {
         object-fit: contain;
@@ -121,23 +127,37 @@ section.stats {
 .curve {
     width: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
-
-    &__topone {
-        background-image: url(../images/bg-section-top-mobile-1.svg);
-        height: 7rem;
-    }
-
-    &__botone {
-        background-image: url(../images/bg-section-bottom-mobile-1.svg);
-        height: 3.25rem;
-    }
-    
+    background-size: cover;   
 }
 
-section.grow-together {
-    background-color: $verypaleblue;
+.topone {
+    background-image: url(../images/bg-section-top-mobile-1.svg);
+    height: 7rem;
+}
 
+.botone {
+    background-image: url(../images/bg-section-bottom-mobile-1.svg);
+    height: 3.25rem;
+}
+
+.toptwo {
+    background-image: url(../images/bg-section-top-mobile-2.svg);
+    height: 6.25rem;
+}
+
+.bottwo {
+    background-image: url(../images/bg-section-bottom-mobile-2.svg);
+    height: 6.25rem;
+}
+
+.topfooter {
+    background-image: url(../images/bg-footer-top-mobile.svg);
+    height: 3.125rem;
+}
+
+section.content {
+    text-align: center;
+    
     .img-container {
         flex: 1 1 0;
 
@@ -156,5 +176,133 @@ section.grow-together {
             margin-top: 1.25rem;
         }
     }
-    
+
+}
+
+section.build {
+    h2 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+.growth, .users {
+    background-color: $verypaleblue;
+}
+
+.conversation {
+    background-color: $white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $verydarkcyan;
+    padding: 1.75rem;
+    //text-align: left;
+
+    * {
+        color: $white;   
+    }
+}
+
+section.newsletter {
+    padding: 0;
+    flex: 1 1 0;
+    align-items: flex-start;
+
+    h2 {
+        margin-bottom: 1.875rem;
+    }
+
+    p {
+        font-size: 0.9375rem;
+    }
+
+    .subscription {
+        margin-top: 2.375rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        #newsletter-email {
+            width: 100%;
+            padding: 1.0625rem;
+            border-radius: 0.625rem;
+            border: none;
+            margin-bottom: 1rem;
+        }
+        
+        .subscribe {
+            padding: 1.125rem 2.625rem;
+            border-radius: 0.3125rem;
+            padding: 1rem 2.5rem;
+            border: 2px solid $pink;
+            background-color: $pink;
+            font-weight: 600;
+            color: $white;
+        }
+    }
+}
+
+section.info {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex: 1 1 0;
+    align-items: flex-start;
+    margin-top: 6.5rem;
+
+    .logo-footer {
+        width: 202px;
+        height: 34px;
+    }
+
+    p {
+        font-size: 0.9375rem;
+        margin-top: 1.375rem;
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        img {
+            margin-right: 20px;
+        }
+
+        .phone, .email {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end
+        }
+
+        .socials {
+            margin-top: 3.25rem;
+            display: flex;
+            flex-direction: row;
+
+            a {
+                margin-right: 1rem;
+                height: 1.5625rem;
+                width: 1.5625rem;
+
+                img {
+                    width: 100%;
+                }
+
+                .fb {
+                    background: url(../images/facebook-square-brands-white.svg) no-repeat;
+                }
+
+                &:hover {
+                    .fb {
+                        background-image: url(../images/facebook-square-brands.svg);
+                    }
+                }
+            }
+        }
+    }
 }

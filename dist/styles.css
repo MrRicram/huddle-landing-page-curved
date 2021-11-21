@@ -14,7 +14,6 @@ html {
 body {
   min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
-  text-align: center;
 }
 
 header {
@@ -49,6 +48,10 @@ p {
   font-weight: 400;
 }
 
+button {
+  cursor: pointer;
+}
+
 section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,6 +69,10 @@ section {
   padding: 5.9375rem 2.625rem;
 }
 
+section.hero {
+  text-align: center;
+}
+
 section.hero h1 {
   font-family: 'Poppins', sans-serif;
   color: #00252e;
@@ -76,7 +83,7 @@ section.hero p {
   margin-bottom: 3.125rem;
 }
 
-section.hero .start {
+.start {
   border-radius: 1.5625rem;
   padding: 1rem 2.5rem;
   border: 2px solid #ff52bf;
@@ -89,6 +96,7 @@ section.hero .start {
 
 section.stats {
   padding-bottom: 1.875rem;
+  text-align: center;
 }
 
 section.stats .main-img {
@@ -138,39 +146,218 @@ section.stats .stat p {
   background-size: cover;
 }
 
-.curve__topone {
+.topone {
   background-image: url(../images/bg-section-top-mobile-1.svg);
   height: 7rem;
 }
 
-.curve__botone {
+.botone {
   background-image: url(../images/bg-section-bottom-mobile-1.svg);
   height: 3.25rem;
 }
 
-section.grow-together {
-  background-color: #f5faff;
+.toptwo {
+  background-image: url(../images/bg-section-top-mobile-2.svg);
+  height: 6.25rem;
 }
 
-section.grow-together .img-container {
+.bottwo {
+  background-image: url(../images/bg-section-bottom-mobile-2.svg);
+  height: 6.25rem;
+}
+
+.topfooter {
+  background-image: url(../images/bg-footer-top-mobile.svg);
+  height: 3.125rem;
+}
+
+section.content {
+  text-align: center;
+}
+
+section.content .img-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
 
-section.grow-together .img-container img {
+section.content .img-container img {
   width: 100%;
 }
 
-section.grow-together .gt-content {
+section.content .gt-content {
   margin-top: 5rem;
 }
 
-section.grow-together .gt-content h2 {
+section.content .gt-content h2 {
   color: #00252e;
 }
 
-section.grow-together .gt-content p {
+section.content .gt-content p {
   margin-top: 1.25rem;
+}
+
+section.build h2 {
+  margin-bottom: 2.5rem;
+}
+
+.growth, .users {
+  background-color: #f5faff;
+}
+
+.conversation {
+  background-color: white;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #00252e;
+  padding: 1.75rem;
+}
+
+footer * {
+  color: white;
+}
+
+section.newsletter {
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+section.newsletter h2 {
+  margin-bottom: 1.875rem;
+}
+
+section.newsletter p {
+  font-size: 0.9375rem;
+}
+
+section.newsletter .subscription {
+  margin-top: 2.375rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+section.newsletter .subscription #newsletter-email {
+  width: 100%;
+  padding: 1.0625rem;
+  border-radius: 0.625rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+section.newsletter .subscription .subscribe {
+  padding: 1.125rem 2.625rem;
+  border-radius: 0.3125rem;
+  padding: 1rem 2.5rem;
+  border: 2px solid #ff52bf;
+  background-color: #ff52bf;
+  font-weight: 600;
+  color: white;
+}
+
+section.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 6.5rem;
+}
+
+section.info .logo-footer {
+  width: 202px;
+  height: 34px;
+}
+
+section.info p {
+  font-size: 0.9375rem;
+  margin-top: 1.375rem;
+}
+
+section.info .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 3rem;
+}
+
+section.info .contacts img {
+  margin-right: 20px;
+}
+
+section.info .contacts .phone, section.info .contacts .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+section.info .contacts .socials {
+  margin-top: 3.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+section.info .contacts .socials a {
+  margin-right: 1rem;
+  height: 1.5625rem;
+  width: 1.5625rem;
+}
+
+section.info .contacts .socials a img {
+  width: 100%;
+}
+
+section.info .contacts .socials a .fb {
+  background: url(../images/facebook-square-brands-white.svg) no-repeat;
+}
+
+section.info .contacts .socials a:hover .fb {
+  background-image: url(../images/facebook-square-brands.svg);
 }
 /*# sourceMappingURL=styles.css.map */
