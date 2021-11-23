@@ -37,8 +37,12 @@ header img {
 header .trybtn {
   border-radius: 1.25rem;
   padding: 0.5rem 1.125rem;
-  border: 2px solid #ff8fd8;
+  border: 1px solid #ff52bf;
   background-color: white;
+  color: #ff52bf;
+}
+
+header .trybtn:hover, header .trybtn:active {
   color: #ff8fd8;
 }
 
@@ -50,9 +54,15 @@ p {
 
 button {
   cursor: pointer;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
 }
 
-section {
+button:hover, button:active {
+  border: 1px solid #ff8fd8;
+}
+
+main section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -69,24 +79,24 @@ section {
   padding: 5.9375rem 2.625rem;
 }
 
-section.hero {
+main section.hero {
   text-align: center;
 }
 
-section.hero h1 {
+main section.hero h1 {
   font-family: 'Poppins', sans-serif;
   color: #00252e;
   margin-bottom: 2.25rem;
 }
 
-section.hero p {
+main section.hero p {
   margin-bottom: 3.125rem;
 }
 
-.start {
+main .start {
   border-radius: 1.5625rem;
   padding: 1rem 2.5rem;
-  border: 2px solid #ff52bf;
+  border: 1px solid #ff52bf;
   background-color: #ff52bf;
   font-weight: 600;
   color: white;
@@ -94,19 +104,23 @@ section.hero p {
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 }
 
-section.stats {
+main .start:hover, main .start:active {
+  background-color: #ff8fd8;
+}
+
+main section.stats {
   padding-bottom: 1.875rem;
   text-align: center;
 }
 
-section.stats .main-img {
+main section.stats .main-img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
   margin-bottom: 1.5rem;
 }
 
-section.stats .stat {
+main section.stats .stat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,95 +131,95 @@ section.stats .stat {
   margin-top: 6.25rem;
 }
 
-section.stats .stat img {
+main section.stats .stat img {
   margin-bottom: 0.5rem;
 }
 
-section.stats .stat .community {
+main section.stats .stat .community {
   height: 1.6875rem;
   width: 1.8125rem;
 }
 
-section.stats .stat .message {
+main section.stats .stat .message {
   height: 1.1875rem;
   width: 1.4375rem;
 }
 
-section.stats .stat h2 {
+main section.stats .stat h2 {
   font-size: 3.25rem;
   color: #00252e;
 }
 
-section.stats .stat p {
+main section.stats .stat p {
   color: #81959c;
 }
 
-.curve {
+main .curve {
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.topone {
+main .topone {
   background-image: url(../images/bg-section-top-mobile-1.svg);
   height: 7rem;
 }
 
-.botone {
+main .botone {
   background-image: url(../images/bg-section-bottom-mobile-1.svg);
   height: 3.25rem;
 }
 
-.toptwo {
+main .toptwo {
   background-image: url(../images/bg-section-top-mobile-2.svg);
   height: 6.25rem;
 }
 
-.bottwo {
+main .bottwo {
   background-image: url(../images/bg-section-bottom-mobile-2.svg);
   height: 6.25rem;
 }
 
-.topfooter {
+main .topfooter {
   background-image: url(../images/bg-footer-top-mobile.svg);
   height: 3.125rem;
 }
 
-section.content {
+main section.content {
   text-align: center;
 }
 
-section.content .img-container {
+main section.content .img-container {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
 }
 
-section.content .img-container img {
+main section.content .img-container img {
   width: 100%;
 }
 
-section.content .gt-content {
+main section.content .gt-content {
   margin-top: 5rem;
 }
 
-section.content .gt-content h2 {
+main section.content .gt-content h2 {
   color: #00252e;
 }
 
-section.content .gt-content p {
+main section.content .gt-content p {
   margin-top: 1.25rem;
 }
 
-section.build h2 {
+main section.build h2 {
   margin-bottom: 2.5rem;
 }
 
-.growth, .users {
+main .growth, main .users {
   background-color: #f5faff;
 }
 
-.conversation {
+main .conversation {
   background-color: white;
 }
 
@@ -274,6 +288,14 @@ section.newsletter .subscription .subscribe {
   background-color: #ff52bf;
   font-weight: 600;
   color: white;
+  cursor: pointer;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+section.newsletter .subscription .subscribe:hover, section.newsletter .subscription .subscribe:active {
+  background-color: #ff8fd8;
+  border: 2px solid #ff8fd8;
 }
 
 section.info {
@@ -347,17 +369,65 @@ section.info .contacts .socials a {
   margin-right: 1rem;
   height: 1.5625rem;
   width: 1.5625rem;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
 }
 
-section.info .contacts .socials a img {
-  width: 100%;
-}
-
-section.info .contacts .socials a .fb {
+section.info .contacts .socials .fb {
   background: url(../images/facebook-square-brands-white.svg) no-repeat;
 }
 
-section.info .contacts .socials a:hover .fb {
-  background-image: url(../images/facebook-square-brands.svg);
+section.info .contacts .socials .fb:hover {
+  background: url(../images/facebook-square-brands.svg) no-repeat;
+}
+
+section.info .contacts .socials .instagram {
+  background: url(../images/instagram-brands-white.svg) no-repeat;
+}
+
+section.info .contacts .socials .instagram:hover {
+  background: url(../images/instagram-brands.svg) no-repeat;
+}
+
+section.info .contacts .socials .twitter {
+  background: url(../images/twitter-square-brands-white.svg) no-repeat;
+}
+
+section.info .contacts .socials .twitter:hover {
+  background: url(../images/twitter-square-brands.svg) no-repeat;
+}
+
+@media only screen and (min-width: 59rem) {
+  header {
+    padding: 5rem;
+  }
+  main section {
+    padding: 3.125rem 6.25rem;
+  }
+  main section.hero p {
+    width: 40%;
+  }
+  main section.stats {
+    padding-left: 13.125rem;
+    padding-right: 13.125rem;
+  }
+  main .start {
+    font-size: 1rem;
+    padding: 1.875rem 5.9375rem;
+    border-radius: 3.125rem;
+  }
+}
+
+@media only screen and (min-width: 43.75rem) {
+  header img {
+    height: 2.375rem;
+    width: 15.0625rem;
+  }
+  main section.hero h1 {
+    font-size: 2.675rem;
+  }
+  main section.hero p {
+    font-size: 1.125rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
