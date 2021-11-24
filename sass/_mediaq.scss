@@ -30,6 +30,11 @@
             margin-top: 8.75rem;
         }
     }
+
+    footer {
+        padding-left: 6.25rem;
+        padding-right: 6.25rem;
+    }
 }
 
 @media only screen and (min-width: 43.75rem) {
@@ -42,7 +47,7 @@
 
     main {
         section {
-            padding: 3.125rem 6.25rem;
+            padding: 3.125rem 8.125rem;
         }
 
         section.hero {
@@ -63,13 +68,22 @@
                 width: 100%;
                 display: grid;
                 grid-template: 1fr / repeat(3, 1fr);
+                justify-items: center; 
 
                 .stat {
-                    h2 {
-                        font-size: 3.75rem;
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    .community, .message {
+                        align-self: flex-start;
                     }
 
-                    p {          
+                    h2 {
+                        font-size: 4.5rem;
+                    }
+
+                    p {   
+                        text-align: center;      
                         font-size: 1.125rem;     
                     }
                 }
@@ -114,77 +128,21 @@
             }
         }
     }
-
-    footer {
-        display: grid;
-        grid-template: 1fr / repeat(2, 1fr);
-        column-gap: 6.25rem;
-        text-align: left;
-        padding-left: 6.25rem;
-        padding-right: 6.25rem;
-        text-align: left;
-
-        .col1 {
-            grid-column: 1 / 2;
-            grid-row: 1 / 2;
-        }
-
-        .col2 {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-        }
-
-        p {
-            width: 55%;
-        }
-
-        section.newsletter {
-            .subscription {
-                flex-direction: row;
-
-                #newsletter-email {
-                    border-radius: 0.3125rem;
-                    width: 20rem;
-                    margin: 0;
-                }
-
-                .subscribe {
-                    margin-left: 2.375rem;
-                    width: 10.125rem;
-                }
-            }
-        }
-
-        section.info {
-            margin: 0;
-            
-            .logo-footer {
-                width: 15.25rem;
-                height: 2.6875rem;
-            }
-
-            .contacts {
-                p {
-                    width: 100%;
-                }
-            }
-        }
-    } 
 }
 
-@media only screen and (min-width: 59rem) {
+@media only screen and (min-width: 64rem) {
     header {
         padding: 5rem;
     }
 
     main {
         section.hero {
-
             h1 {
                 font-size: 3.5rem;
             }
 
             p {
+                font-size: 1.5rem;
                 width: 45%;                
             }
         }
@@ -216,6 +174,78 @@
 
         section.content {
             column-gap: 10rem;
+            
+            .gt-content {
+                p {
+                    width: 60%;
+                }
+            }
         }
     }
+
+    footer {
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        column-gap: 6.25rem;
+        text-align: left;
+        padding-left: 8.125rem;
+        padding-right: 8.125rem;
+
+        .col1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .col2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .row2 {
+            grid-column: 1 / 2;
+            grid-row: 2 /3;
+        }
+
+        p {
+            width: 55%;
+        }
+
+        section.newsletter {
+            .subscription {                
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+
+                input[type="email"] {
+                    border-radius: 0.3125rem;
+                    width: 20rem;
+                    margin: 0;
+                }
+
+                .error-message {
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+
+                input[type="submit"] {
+                    margin-left: 2.375rem;
+                    width: 10.125rem;
+                }
+            }
+        }
+
+        section.info {
+            margin: 0;
+            
+            .logo-footer {
+                width: 15.25rem;
+                height: 2.6875rem;
+            }
+
+            .contacts {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    } 
 }

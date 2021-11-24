@@ -255,15 +255,41 @@ footer {
             flex-direction: column;
             align-items: flex-end;
     
-            #newsletter-email {
+            input[type="email"] {
                 width: 100%;
                 padding: 1.0625rem;
                 border-radius: 0.625rem;
                 border: none;
                 margin-bottom: 1rem;
+                color: $verydarkcyan;
+
+                &:focus {
+                    border: 2px solid $pink;
+                    outline: none;
+                }
+
+                &:not(:placeholder-shown):invalid {
+                    border: 2px solid red;
+                }
+
+                &:not(:focus):not(:placeholder-shown):invalid {
+                    border-color: red;
+                }
+
+                &:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+                    display: block; 
+                }
+            }
+
+            .error-message {
+                display: none;
+                font-weight: bold;
+                color: red;
+                align-self: flex-start;
+                margin-bottom: 1rem;
             }
             
-            .subscribe {
+            input[type="submit"] {
                 padding: 1.125rem 2.625rem;
                 border-radius: 0.3125rem;
                 padding: 1rem 2.5rem;

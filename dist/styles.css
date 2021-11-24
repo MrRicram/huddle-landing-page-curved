@@ -294,15 +294,42 @@ footer section.newsletter .subscription {
           align-items: flex-end;
 }
 
-footer section.newsletter .subscription #newsletter-email {
+footer section.newsletter .subscription input[type="email"] {
   width: 100%;
   padding: 1.0625rem;
   border-radius: 0.625rem;
   border: none;
   margin-bottom: 1rem;
+  color: #00252e;
 }
 
-footer section.newsletter .subscription .subscribe {
+footer section.newsletter .subscription input[type="email"]:focus {
+  border: 2px solid #ff52bf;
+  outline: none;
+}
+
+footer section.newsletter .subscription input[type="email"]:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+footer section.newsletter .subscription input[type="email"]:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+}
+
+footer section.newsletter .subscription input[type="email"]:not(:focus):not(:placeholder-shown):invalid ~ .error-message {
+  display: block;
+}
+
+footer section.newsletter .subscription .error-message {
+  display: none;
+  font-weight: bold;
+  color: red;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 1rem;
+}
+
+footer section.newsletter .subscription input[type="submit"] {
   padding: 1.125rem 2.625rem;
   border-radius: 0.3125rem;
   padding: 1rem 2.5rem;
@@ -315,7 +342,7 @@ footer section.newsletter .subscription .subscribe {
   transition: 300ms ease-out;
 }
 
-footer section.newsletter .subscription .subscribe:hover, footer section.newsletter .subscription .subscribe:active {
+footer section.newsletter .subscription input[type="submit"]:hover, footer section.newsletter .subscription input[type="submit"]:active {
   background-color: #ff8fd8;
   border: 2px solid #ff8fd8;
 }
@@ -461,6 +488,10 @@ footer section.info .contacts .socials .attribution a {
     height: 12.5rem;
     margin-top: 8.75rem;
   }
+  footer {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
 }
 
 @media only screen and (min-width: 43.75rem) {
@@ -469,7 +500,7 @@ footer section.info .contacts .socials .attribution a {
     width: 15.0625rem;
   }
   main section {
-    padding: 3.125rem 6.25rem;
+    padding: 3.125rem 8.125rem;
   }
   main section.hero h1 {
     font-size: 2.625rem;
@@ -488,11 +519,25 @@ footer section.info .contacts .socials .attribution a {
     -ms-grid-rows: 1fr;
     -ms-grid-columns: (1fr)[3];
         grid-template: 1fr/repeat(3, 1fr);
+    justify-items: center;
+  }
+  main section.stats .stat-container .stat {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section.stats .stat-container .stat .community, main section.stats .stat-container .stat .message {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   main section.stats .stat-container .stat h2 {
-    font-size: 3.75rem;
+    font-size: 4.5rem;
   }
   main section.stats .stat-container .stat p {
+    text-align: center;
     font-size: 1.125rem;
   }
   main .col1 {
@@ -538,66 +583,9 @@ footer section.info .contacts .socials .attribution a {
   main section.build h2 {
     font-size: 2.25rem;
   }
-  footer {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-rows: 1fr;
-    -ms-grid-columns: (1fr)[2];
-        grid-template: 1fr/repeat(2, 1fr);
-    -webkit-column-gap: 6.25rem;
-            column-gap: 6.25rem;
-    text-align: left;
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
-    text-align: left;
-  }
-  footer .col1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / 2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-  }
-  footer .col2 {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1 / 2;
-  }
-  footer p {
-    width: 55%;
-  }
-  footer section.newsletter .subscription {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  footer section.newsletter .subscription #newsletter-email {
-    border-radius: 0.3125rem;
-    width: 20rem;
-    margin: 0;
-  }
-  footer section.newsletter .subscription .subscribe {
-    margin-left: 2.375rem;
-    width: 10.125rem;
-  }
-  footer section.info {
-    margin: 0;
-  }
-  footer section.info .logo-footer {
-    width: 15.25rem;
-    height: 2.6875rem;
-  }
-  footer section.info .contacts p {
-    width: 100%;
-  }
 }
 
-@media only screen and (min-width: 59rem) {
+@media only screen and (min-width: 64rem) {
   header {
     padding: 5rem;
   }
@@ -605,6 +593,7 @@ footer section.info .contacts .socials .attribution a {
     font-size: 3.5rem;
   }
   main section.hero p {
+    font-size: 1.5rem;
     width: 45%;
   }
   main .start {
@@ -627,6 +616,78 @@ footer section.info .contacts .socials .attribution a {
   main section.content {
     -webkit-column-gap: 10rem;
             column-gap: 10rem;
+  }
+  main section.content .gt-content p {
+    width: 60%;
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (1fr)[2];
+        grid-template: 1fr/repeat(2, 1fr);
+    -webkit-column-gap: 6.25rem;
+            column-gap: 6.25rem;
+    text-align: left;
+    padding-left: 8.125rem;
+    padding-right: 8.125rem;
+  }
+  footer .col1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  footer .col2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  footer .row2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 /3;
+  }
+  footer p {
+    width: 55%;
+  }
+  footer section.newsletter .subscription {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+    -ms-grid-columns: (1fr)[2];
+        grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+  footer section.newsletter .subscription input[type="email"] {
+    border-radius: 0.3125rem;
+    width: 20rem;
+    margin: 0;
+  }
+  footer section.newsletter .subscription .error-message {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  footer section.newsletter .subscription input[type="submit"] {
+    margin-left: 2.375rem;
+    width: 10.125rem;
+  }
+  footer section.info {
+    margin: 0;
+  }
+  footer section.info .logo-footer {
+    width: 15.25rem;
+    height: 2.6875rem;
+  }
+  footer section.info .contacts p {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
