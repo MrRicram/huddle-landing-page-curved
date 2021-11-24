@@ -89,6 +89,7 @@ main section {
 
 main section.hero {
   text-align: center;
+  padding-top: 7.5rem;
 }
 
 main section.hero h1 {
@@ -271,8 +272,9 @@ footer section.newsletter {
           align-items: flex-start;
 }
 
-footer section.newsletter h2 {
+footer section.newsletter h3 {
   margin-bottom: 1.875rem;
+  font-size: 1.5rem;
 }
 
 footer section.newsletter p {
@@ -370,9 +372,10 @@ footer section.info .logo-footer {
   height: 34px;
 }
 
-footer section.info p {
+footer section.info h4 {
   font-size: 0.9375rem;
   margin-top: 1.375rem;
+  font-weight: 400;
 }
 
 footer section.info .contacts {
@@ -401,6 +404,7 @@ footer section.info .contacts .phone, footer section.info .contacts .email {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  margin-bottom: 1.25rem;
 }
 
 footer section.info .contacts .socials {
@@ -589,6 +593,9 @@ footer section.info .contacts .socials .attribution a {
   header {
     padding: 5rem;
   }
+  main section.hero {
+    padding-top: 15rem;
+  }
   main section.hero h1 {
     font-size: 3.5rem;
   }
@@ -685,6 +692,9 @@ footer section.info .contacts .socials .attribution a {
   footer section.info .logo-footer {
     width: 15.25rem;
     height: 2.6875rem;
+  }
+  footer section.info h4 {
+    width: 55%;
   }
   footer section.info .contacts p {
     width: 100%;
