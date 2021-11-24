@@ -40,25 +40,33 @@ header .trybtn {
   border: 1px solid #ff52bf;
   background-color: white;
   color: #ff52bf;
-}
-
-header .trybtn:hover, header .trybtn:active {
-  color: #ff8fd8;
-}
-
-p {
-  font-size: 0.8125rem;
-  color: #00252e;
-  font-weight: 400;
-}
-
-button {
   cursor: pointer;
   -webkit-transition: 300ms ease-out;
   transition: 300ms ease-out;
 }
 
-button:hover, button:active {
+header .trybtn:hover, header .trybtn:active {
+  border: 1px solid #ff8fd8;
+  color: #ff8fd8;
+}
+
+main h1, main h2 {
+  letter-spacing: -2px;
+}
+
+main p {
+  font-size: 0.8125rem;
+  color: #00252e;
+  font-weight: 400;
+}
+
+main button {
+  cursor: pointer;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+main button:hover, main button:active {
   border: 1px solid #ff8fd8;
 }
 
@@ -120,7 +128,7 @@ main section.stats .main-img {
   margin-bottom: 1.5rem;
 }
 
-main section.stats .stat {
+main section.stats .stat-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,29 +136,38 @@ main section.stats .stat {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main section.stats .stat-container .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 6.25rem;
 }
 
-main section.stats .stat img {
-  margin-bottom: 0.5rem;
+main section.stats .stat-container .stat .community {
+  height: 1.75rem;
+  width: 1.9375rem;
 }
 
-main section.stats .stat .community {
-  height: 1.6875rem;
-  width: 1.8125rem;
+main section.stats .stat-container .stat .message {
+  height: 1.3125rem;
+  width: 1.5625rem;
 }
 
-main section.stats .stat .message {
-  height: 1.1875rem;
-  width: 1.4375rem;
-}
-
-main section.stats .stat h2 {
+main section.stats .stat-container .stat h2 {
   font-size: 3.25rem;
   color: #00252e;
 }
 
-main section.stats .stat p {
+main section.stats .stat-container .stat p {
   color: #81959c;
 }
 
@@ -397,24 +414,31 @@ section.info .contacts .socials .twitter:hover {
   background: url(../images/twitter-square-brands.svg) no-repeat;
 }
 
-@media only screen and (min-width: 59rem) {
-  header {
-    padding: 5rem;
+@media only screen and (min-width: 23.4375rem) {
+  main .topone {
+    background-image: url(../images/bg-section-top-desktop-1.svg);
+    height: 10rem;
+    margin-top: 8.75rem;
   }
-  main section {
-    padding: 3.125rem 6.25rem;
+  main .botone {
+    background-image: url(../images/bg-section-bottom-desktop-1.svg);
+    height: 8.75rem;
+    margin-bottom: 8.75rem;
   }
-  main section.hero p {
-    width: 40%;
+  main .toptwo {
+    background-image: url(../images/bg-section-top-desktop-2.svg);
+    height: 9.375rem;
+    margin-top: 8.75rem;
   }
-  main section.stats {
-    padding-left: 13.125rem;
-    padding-right: 13.125rem;
+  main .bottwo {
+    background-image: url(../images/bg-section-bottom-desktop-2.svg);
+    height: 8.75rem;
+    margin-bottom: 8.75rem;
   }
-  main .start {
-    font-size: 1rem;
-    padding: 1.875rem 5.9375rem;
-    border-radius: 3.125rem;
+  main .topfooter {
+    background-image: url(../images/bg-footer-top-desktop.svg);
+    height: 12.5rem;
+    margin-top: 8.75rem;
   }
 }
 
@@ -424,10 +448,107 @@ section.info .contacts .socials .twitter:hover {
     width: 15.0625rem;
   }
   main section.hero h1 {
-    font-size: 2.675rem;
+    font-size: 2.625rem;
   }
   main section.hero p {
+    font-size: 1rem;
+  }
+  main section.stats {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
+  main section.stats .stat-container {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (1fr)[3];
+        grid-template: 1fr/repeat(3, 1fr);
+  }
+  main section.stats .stat-container .stat h2 {
+    font-size: 3.75rem;
+  }
+  main section.stats .stat-container .stat p {
     font-size: 1.125rem;
+  }
+  main .col1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  main .col2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  main .col3 {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  main section.content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (1fr)[2];
+        grid-template: 1fr/repeat(2, 1fr);
+    -webkit-column-gap: 6.25rem;
+            column-gap: 6.25rem;
+    text-align: left;
+  }
+  main section.content h2 {
+    font-size: 2.25rem;
+  }
+  main section.content p {
+    font-size: 1rem;
+  }
+  main section.build h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (min-width: 59rem) {
+  header {
+    padding: 5rem;
+  }
+  main section {
+    padding: 3.125rem 6.25rem;
+  }
+  main section.hero h1 {
+    font-size: 3.5rem;
+  }
+  main section.hero p {
+    width: 45%;
+  }
+  main .start {
+    font-size: 1rem;
+    padding: 1.875rem 5.9375rem;
+    border-radius: 3.125rem;
+  }
+  main section.stats {
+    padding-left: 13.125rem;
+    padding-right: 13.125rem;
+  }
+  main section.stats .stat-container .stat .community {
+    height: 2.8125rem;
+    width: 2.9375rem;
+  }
+  main section.stats .stat-container .stat .message {
+    height: 2.1875rem;
+    width: 2.5625rem;
+  }
+  main section.content {
+    -webkit-column-gap: 10rem;
+            column-gap: 10rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
