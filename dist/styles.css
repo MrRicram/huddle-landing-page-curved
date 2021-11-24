@@ -228,8 +228,13 @@ main section.content .gt-content p {
   margin-top: 1.25rem;
 }
 
+main section.build {
+  text-align: center;
+}
+
 main section.build h2 {
   margin-bottom: 2.5rem;
+  color: #00252e;
 }
 
 main .growth, main .users {
@@ -256,7 +261,7 @@ footer * {
   color: white;
 }
 
-section.newsletter {
+footer section.newsletter {
   padding: 0;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
@@ -266,15 +271,15 @@ section.newsletter {
           align-items: flex-start;
 }
 
-section.newsletter h2 {
+footer section.newsletter h2 {
   margin-bottom: 1.875rem;
 }
 
-section.newsletter p {
+footer section.newsletter p {
   font-size: 0.9375rem;
 }
 
-section.newsletter .subscription {
+footer section.newsletter .subscription {
   margin-top: 2.375rem;
   width: 100%;
   display: -webkit-box;
@@ -289,7 +294,7 @@ section.newsletter .subscription {
           align-items: flex-end;
 }
 
-section.newsletter .subscription #newsletter-email {
+footer section.newsletter .subscription #newsletter-email {
   width: 100%;
   padding: 1.0625rem;
   border-radius: 0.625rem;
@@ -297,7 +302,7 @@ section.newsletter .subscription #newsletter-email {
   margin-bottom: 1rem;
 }
 
-section.newsletter .subscription .subscribe {
+footer section.newsletter .subscription .subscribe {
   padding: 1.125rem 2.625rem;
   border-radius: 0.3125rem;
   padding: 1rem 2.5rem;
@@ -310,12 +315,12 @@ section.newsletter .subscription .subscribe {
   transition: 300ms ease-out;
 }
 
-section.newsletter .subscription .subscribe:hover, section.newsletter .subscription .subscribe:active {
+footer section.newsletter .subscription .subscribe:hover, footer section.newsletter .subscription .subscribe:active {
   background-color: #ff8fd8;
   border: 2px solid #ff8fd8;
 }
 
-section.info {
+footer section.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,17 +338,17 @@ section.info {
   margin-top: 6.5rem;
 }
 
-section.info .logo-footer {
+footer section.info .logo-footer {
   width: 202px;
   height: 34px;
 }
 
-section.info p {
+footer section.info p {
   font-size: 0.9375rem;
   margin-top: 1.375rem;
 }
 
-section.info .contacts {
+footer section.info .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -354,11 +359,11 @@ section.info .contacts {
   margin-top: 3rem;
 }
 
-section.info .contacts img {
+footer section.info .contacts img {
   margin-right: 20px;
 }
 
-section.info .contacts .phone, section.info .contacts .email {
+footer section.info .contacts .phone, footer section.info .contacts .email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,7 +376,7 @@ section.info .contacts .phone, section.info .contacts .email {
           align-items: flex-end;
 }
 
-section.info .contacts .socials {
+footer section.info .contacts .socials {
   margin-top: 3.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,9 +385,12 @@ section.info .contacts .socials {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-section.info .contacts .socials a {
+footer section.info .contacts .socials a {
   margin-right: 1rem;
   height: 1.5625rem;
   width: 1.5625rem;
@@ -390,31 +398,44 @@ section.info .contacts .socials a {
   transition: 300ms ease-out;
 }
 
-section.info .contacts .socials .fb {
+footer section.info .contacts .socials .fb {
   background: url(../images/facebook-square-brands-white.svg) no-repeat;
 }
 
-section.info .contacts .socials .fb:hover {
+footer section.info .contacts .socials .fb:hover {
   background: url(../images/facebook-square-brands.svg) no-repeat;
 }
 
-section.info .contacts .socials .instagram {
+footer section.info .contacts .socials .instagram {
   background: url(../images/instagram-brands-white.svg) no-repeat;
 }
 
-section.info .contacts .socials .instagram:hover {
+footer section.info .contacts .socials .instagram:hover {
   background: url(../images/instagram-brands.svg) no-repeat;
 }
 
-section.info .contacts .socials .twitter {
+footer section.info .contacts .socials .twitter {
   background: url(../images/twitter-square-brands-white.svg) no-repeat;
 }
 
-section.info .contacts .socials .twitter:hover {
+footer section.info .contacts .socials .twitter:hover {
   background: url(../images/twitter-square-brands.svg) no-repeat;
 }
 
-@media only screen and (min-width: 23.4375rem) {
+footer section.info .contacts .socials .attribution {
+  text-align: center;
+  margin-left: 1rem;
+}
+
+footer section.info .contacts .socials .attribution p {
+  margin: 0;
+}
+
+footer section.info .contacts .socials .attribution a {
+  margin: 0;
+}
+
+@media only screen and (min-width: 28.125rem) {
   main .topone {
     background-image: url(../images/bg-section-top-desktop-1.svg);
     height: 10rem;
@@ -446,6 +467,9 @@ section.info .contacts .socials .twitter:hover {
   header img {
     height: 2.375rem;
     width: 15.0625rem;
+  }
+  main section {
+    padding: 3.125rem 6.25rem;
   }
   main section.hero h1 {
     font-size: 2.625rem;
@@ -514,14 +538,68 @@ section.info .contacts .socials .twitter:hover {
   main section.build h2 {
     font-size: 2.25rem;
   }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (1fr)[2];
+        grid-template: 1fr/repeat(2, 1fr);
+    -webkit-column-gap: 6.25rem;
+            column-gap: 6.25rem;
+    text-align: left;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    text-align: left;
+  }
+  footer .col1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  footer .col2 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  footer p {
+    width: 55%;
+  }
+  footer section.newsletter .subscription {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer section.newsletter .subscription #newsletter-email {
+    border-radius: 0.3125rem;
+    width: 20rem;
+    margin: 0;
+  }
+  footer section.newsletter .subscription .subscribe {
+    margin-left: 2.375rem;
+    width: 10.125rem;
+  }
+  footer section.info {
+    margin: 0;
+  }
+  footer section.info .logo-footer {
+    width: 15.25rem;
+    height: 2.6875rem;
+  }
+  footer section.info .contacts p {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 59rem) {
   header {
     padding: 5rem;
-  }
-  main section {
-    padding: 3.125rem 6.25rem;
   }
   main section.hero h1 {
     font-size: 3.5rem;

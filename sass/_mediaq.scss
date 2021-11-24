@@ -1,4 +1,4 @@
-@media only screen and (min-width: 23.4375rem) {
+@media only screen and (min-width: 28.125rem) {
     main {
         .topone {
             background-image: url(../images/bg-section-top-desktop-1.svg);
@@ -41,6 +41,10 @@
     }
 
     main {
+        section {
+            padding: 3.125rem 6.25rem;
+        }
+
         section.hero {
             h1 {
                 font-size: 2.625rem;
@@ -110,6 +114,62 @@
             }
         }
     }
+
+    footer {
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+        column-gap: 6.25rem;
+        text-align: left;
+        padding-left: 6.25rem;
+        padding-right: 6.25rem;
+        text-align: left;
+
+        .col1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        .col2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+
+        p {
+            width: 55%;
+        }
+
+        section.newsletter {
+            .subscription {
+                flex-direction: row;
+
+                #newsletter-email {
+                    border-radius: 0.3125rem;
+                    width: 20rem;
+                    margin: 0;
+                }
+
+                .subscribe {
+                    margin-left: 2.375rem;
+                    width: 10.125rem;
+                }
+            }
+        }
+
+        section.info {
+            margin: 0;
+            
+            .logo-footer {
+                width: 15.25rem;
+                height: 2.6875rem;
+            }
+
+            .contacts {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    } 
 }
 
 @media only screen and (min-width: 59rem) {
@@ -118,10 +178,6 @@
     }
 
     main {
-        section {
-            padding: 3.125rem 6.25rem;
-        }
-
         section.hero {
 
             h1 {

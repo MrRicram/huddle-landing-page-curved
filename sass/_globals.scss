@@ -206,8 +206,11 @@ main {
     }
 
     section.build {
+        text-align: center;
+
         h2 {
             margin-bottom: 2.5rem;
+            color: $verydarkcyan;
         }
     }
 
@@ -231,123 +234,139 @@ footer {
     * {
         color: $white;   
     }
-}
 
-section.newsletter {
-    padding: 0;
-    flex: 1 1 0;
-    align-items: flex-start;
-
-    h2 {
-        margin-bottom: 1.875rem;
-    }
-
-    p {
-        font-size: 0.9375rem;
-    }
-
-    .subscription {
-        margin-top: 2.375rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-
-        #newsletter-email {
+    section.newsletter {
+        padding: 0;
+        flex: 1 1 0;
+        align-items: flex-start;
+    
+        h2 {
+            margin-bottom: 1.875rem;
+        }
+    
+        p {
+            font-size: 0.9375rem;
+        }
+    
+        .subscription {
+            margin-top: 2.375rem;
             width: 100%;
-            padding: 1.0625rem;
-            border-radius: 0.625rem;
-            border: none;
-            margin-bottom: 1rem;
-        }
-        
-        .subscribe {
-            padding: 1.125rem 2.625rem;
-            border-radius: 0.3125rem;
-            padding: 1rem 2.5rem;
-            border: 2px solid $pink;
-            background-color: $pink;
-            font-weight: 600;
-            color: $white;
-            cursor: pointer;
-            transition: 300ms ease-out;
-
-            &:hover, &:active {
-                background-color: $lightpink;
-                border: 2px solid $lightpink;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+    
+            #newsletter-email {
+                width: 100%;
+                padding: 1.0625rem;
+                border-radius: 0.625rem;
+                border: none;
+                margin-bottom: 1rem;
+            }
+            
+            .subscribe {
+                padding: 1.125rem 2.625rem;
+                border-radius: 0.3125rem;
+                padding: 1rem 2.5rem;
+                border: 2px solid $pink;
+                background-color: $pink;
+                font-weight: 600;
+                color: $white;
+                cursor: pointer;
+                transition: 300ms ease-out;
+    
+                &:hover, &:active {
+                    background-color: $lightpink;
+                    border: 2px solid $lightpink;
+                }
             }
         }
     }
-}
-
-section.info {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    flex: 1 1 0;
-    align-items: flex-start;
-    margin-top: 6.5rem;
-
-    .logo-footer {
-        width: 202px;
-        height: 34px;
-    }
-
-    p {
-        font-size: 0.9375rem;
-        margin-top: 1.375rem;
-    }
-
-    .contacts {
+    
+    section.info {
         display: flex;
         flex-direction: column;
-        margin-top: 3rem;
-
-        img {
-            margin-right: 20px;
+        padding: 0;
+        flex: 1 1 0;
+        align-items: flex-start;
+        margin-top: 6.5rem;
+    
+        .logo-footer {
+            width: 202px;
+            height: 34px;
         }
-
-        .phone, .email {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end
+    
+        p {
+            font-size: 0.9375rem;
+            margin-top: 1.375rem;
         }
-
-        .socials {
-            margin-top: 3.25rem;
+    
+        .contacts {
             display: flex;
-            flex-direction: row;
-
-            a {
-                margin-right: 1rem;
-                height: 1.5625rem;
-                width: 1.5625rem;
-                transition: 300ms ease-out;
+            flex-direction: column;
+            margin-top: 3rem;
+    
+            img {
+                margin-right: 20px;
             }
-
-            .fb {
-                background: url(../images/facebook-square-brands-white.svg) no-repeat;
-
-                &:hover {
-                    background: url(../images/facebook-square-brands.svg) no-repeat;
+    
+            .phone, .email {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end
+            }
+    
+            .socials {
+                margin-top: 3.25rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+    
+                a {
+                    margin-right: 1rem;
+                    height: 1.5625rem;
+                    width: 1.5625rem;
+                    transition: 300ms ease-out;
                 }
-            }
-
-            .instagram {
-                background: url(../images/instagram-brands-white.svg) no-repeat;
-
-                &:hover {
-                    background: url(../images/instagram-brands.svg) no-repeat;
+    
+                .fb {
+                    background: url(../images/facebook-square-brands-white.svg) no-repeat;
+    
+                    &:hover {
+                        background: url(../images/facebook-square-brands.svg) no-repeat;
+                    }
                 }
-            }
+    
+                .instagram {
+                    background: url(../images/instagram-brands-white.svg) no-repeat;
+    
+                    &:hover {
+                        background: url(../images/instagram-brands.svg) no-repeat;
+                    }
+                }
+    
+                .twitter {
+                    background: url(../images/twitter-square-brands-white.svg) no-repeat;
+    
+                    &:hover {
+                        background: url(../images/twitter-square-brands.svg) no-repeat;
+                    }
+                }
 
-            .twitter {
-                background: url(../images/twitter-square-brands-white.svg) no-repeat;
+                .attribution {
+                    text-align: center;
+                    margin-left: 1rem;
+                    
+                    p {
+                        margin: 0;
+                    }
 
-                &:hover {
-                    background: url(../images/twitter-square-brands.svg) no-repeat;
+                    a {
+                        margin: 0;
+                    }
                 }
             }
         }
     }
 }
+
+
